@@ -27,7 +27,7 @@ import lombok.EqualsAndHashCode;
 @NoArgsConstructor
 @AllArgsConstructor
 @ToString
-@EqualsAndHashCode(of = {"id", "nombre"}) // Un equipo es único por su ID, o por su nombre
+@EqualsAndHashCode(of = {"id", "nombre"}) 
 @Entity
 @Table(name = "equipos_reales",
         uniqueConstraints = {
@@ -57,7 +57,7 @@ public class EquipoReal {
 
 
     @Size(max = 255, message = "La URL del logo no debe exceder los 255 caracteres.")
-    @Column(name = "logo_url", length = 255, nullable = true) // El logo es opcional
+    @Column(name = "logo_url", length = 255, nullable = true)
     private String logoUrl;
 
 }
